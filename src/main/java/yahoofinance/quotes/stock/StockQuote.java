@@ -40,6 +40,7 @@ public class StockQuote {
     
     private Long volume;
     private Long avgVolume;
+    private Long avgVolume10D;
     
     public StockQuote(String symbol) {
         this.symbol = symbol;
@@ -329,7 +330,15 @@ public class StockQuote {
         this.avgVolume = avgVolume;
     }
     
-    @Override
+    public Long getAvgVolume10D() {
+		return avgVolume10D;
+	}
+
+	public void setAvgVolume10D(Long avgVolume10D) {
+		this.avgVolume10D = avgVolume10D;
+	}
+
+	@Override
     public String toString() {
         return "Ask: " + this.ask + ", Bid: " + this.bid + ", Price: " + this.price + ", Prev close: " + this.previousClose;
     }
